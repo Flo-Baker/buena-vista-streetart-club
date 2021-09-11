@@ -1,22 +1,25 @@
 <h2>Signup</h2>
 
 <div>
-  <form action="/auth/signup" method="POST">
+  <form action="/auth/signup" method="POST" enctype="multipart/form-data">
 
     <label for="firstName">First Name:</label>
-    <input type="text" name="firstName" automcomplete="off"/>
-
-    <label for="LastName">Last Name:</label>
-    <input type="text" name="LastName" automcomplete="off"/>
-
+    <input type="text" name="firstName" autocomplete="off"/>
+<br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" name="lastName" autocomplete="off"/>
+<br>
     <label for="email">E-Mail:</label>
-    <input type="text" name="email" automcomplete="off"/>
-
+    <input type="text" name="email" autocomplete="off"/>
+<br>
     <label for="username">Username:</label>
-    <input type="text" name="username" automcomplete="off"/>
-
+    <input type="text" name="username" autocomplete="off"/>
+<br>
     <label for="password">Password:</label>
-    <input type="password" name="password" placeholder="*****" automcomplete="off"/>
+    <input type="password" name="password" placeholder="*****" autocomplete="off"/>
+<br>
+    <label for='imageUrl'>Profile Picture:</label>
+    <input type='file' name='imageUrl' /> 
 
     <button type="submit">Join the club!</button>
 

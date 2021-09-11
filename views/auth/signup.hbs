@@ -1,0 +1,26 @@
+<h2>Signup</h2>
+
+<div>
+  <form action="/auth/signup" method="POST">
+
+    <label for="firstName">First Name:</label>
+    <input type="text" name="firstName" automcomplete="off"/>
+
+    <label for="LastName">Last Name:</label>
+    <input type="text" name="LastName" automcomplete="off"/>
+
+    <label for="email">E-Mail:</label>
+    <input type="text" name="email" automcomplete="off"/>
+
+    <label for="username">Username:</label>
+    <input type="text" name="username" automcomplete="off"/>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="*****" automcomplete="off"/>
+
+    <button type="submit">Join the club!</button>
+
+    <p style="color: red">{{errorMessage}}</p>
+
+  </form>
+</div>

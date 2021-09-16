@@ -22,8 +22,7 @@ const artSchema = new Schema ({
         type: String,
         },
     artworkImage: {
-        type: String, 
-        required: true,
+        type: String,
     },
 });
 

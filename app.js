@@ -38,7 +38,7 @@ app.use("/profile", profileRoutes);
 
 // 3. Route -> artworks
 const artworkRoutes = require("./routes/artwork.routes");
-app.use("/artwork", artworkRoutes);
+app.use("/artworks", artworkRoutes);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

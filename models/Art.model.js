@@ -24,6 +24,10 @@ const artSchema = new Schema ({
     artworkImage: {
         type: String,
     },
+    uploadedBy: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+    },
 });
 
 const Art = model("Art", artSchema);

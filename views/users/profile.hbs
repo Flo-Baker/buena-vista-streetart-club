@@ -1,9 +1,16 @@
-<h1>Profile of {{this.username}}</h1>
-
 <div>
+  {{#with user}}
+    <h2>Hi {{username}}!</h2>
 
-    {{profilePicture}}
-    <p>{{firstName}} {{LastName}}</p>
+    <p>You are logged in with: {{email}}</p>
+    <p>Your profile pic:</p>
+    <img src="{{profilePicture}}" alt="profile picture of {{username}}" />
+  {{/with}}
+  <br />
+  <a href="/artworks/upload">Upload</a>
+  {{#each arts}}
     <p>Your uploads:</p>
+    <img src="{{artworkImage}}" alt="streetart spotted by {{username}}" />
 
+  {{/each}}
 </div>

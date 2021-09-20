@@ -1,1 +1,14 @@
 <h1>Available Artists</h1>
+
+{{#each artists}}
+  <p>{{this.artistName}}</p>
+
+  <a href="/artists/details/{{this._id}}/update">Edit Artist</a>
+  <br />
+  <form action="/artists/details/{{this._id}}/delete" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+  <hr />
+{{/each}}
+
+<a href="/artists/create">Create a new Artist</a>

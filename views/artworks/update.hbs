@@ -1,12 +1,12 @@
 <h1>Here to update an artwork</h1>
 
 <div>
-  <form action="/details/{{singleArtworkFromDB._id}}/update" method="POST">
+  <form action="/artworks/details/{{singleArtworkFromDB._id}}/update" method="POST">
 
     <label for="category">Choose art´s category:</label>
     <select name="category">
       {{#each artwork}}
-        <option value="{{this.category}}">{{this.category}}</option>
+        <option value="{{this}}">{{this}}</option>
       {{/each}}
     </select>
     <br />

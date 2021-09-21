@@ -82,10 +82,19 @@ router.get("/details/:artworkId", (req, res, next) => {
 
 router.get("/details/:artworkId/update", isLoggedIn, (req, res, next) => {
   const { artworkId } = req.params;
+  const artwork = [
+    "Graffiti",
+    "Sticker",
+    "Urban Knitting",
+    "Graphic Poster",
+    "Paper Works",
+    "Mosaic",
+    "Stencil",
+  ];
   Art.findById(artworkId)
     .then((singleArtworkFromDB) => {
       console.log("Here is your updated artwork.", singleArtworkFromDB);
-      res.render("artworks/update.hbs", { singleArtworkFromDB });
+      res.render("artworks/update.hbs", { singleArtworkFromDB, artwork });
     })
     .catch((err) => {
       console.log("An error has occured while updating an artwork.");
@@ -107,7 +116,7 @@ router.post("/details/:artworkId/update", isLoggedIn, (req, res, next) => {
         "Here is the new artwork you have updated.",
         singleArtworkFromDB
       );
-      res.redirect("/artworks/list");
+      res.redirect("/artworks/overview");
     })
     .catch((err) => {
       console.log("An error has occured while updating a new artwork.");

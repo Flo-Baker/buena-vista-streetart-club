@@ -21,4 +21,5 @@ router.get("/details/:artistId", (req, res, next) => {
     });
 });
 
+
 module.exports = router;

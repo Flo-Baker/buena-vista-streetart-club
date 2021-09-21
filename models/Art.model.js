@@ -10,6 +10,10 @@ const artSchema = new Schema ({
         // enum: [ 'Xoooox', 'Banksy', 'C215', '1UP', 'El Bocho', 'SOBR', 'Gregos', 'Invader', 'Alias', 'SP38', 'Mein Lieber Prost', 'unknown' ],
         required: true,
     },
+    titleOfArtwork: {
+        type: String,
+        required: true,
+    },
     date: {
         type: Date,
         required: true,

@@ -1,6 +1,14 @@
 <h1>Available Artworks</h1>
 <div>
   {{#each arts}}
-    <img src="{{this.artworkImage}}" />
+    <img src="{{this.artworkImage}}" width="100px" />
+    {{this.artist}}
+    {{this.location}}
+    <a href="/artworks/details/{{this._id}}">See details of this Artwork</a>
+    <br>
+    <a href="/artworks/details/{{this._id}}/update">Edit Artwork</a>
+  <br />
+  <form action="/artworks/details/{{this._id}}/delete" method="POST">
+    <button type="submit">Delete</button>
   {{/each}}
 </div>

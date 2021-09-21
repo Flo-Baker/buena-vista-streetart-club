@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { isAdmin } = require("../middlewares/auth-middlewares");
 const Artist = require("../models/Artist.model");
 const ArtistModel = require("../models/Artist.model");
 
@@ -20,11 +21,11 @@ router.get("/list", (req, res, next) => {
 
 // router.get is only to show the form to create an artist
 
-router.get("/create", (req, res, next) => {
+router.get("/create", isAdmin, (req, res, next) => {
   res.render("artists/create.hbs");
 });
 
-router.post("/create", (req, res, next) => {
+router.post("/create", isAdmin, (req, res, next) => {
   const { artistName, countryOfOrigin, shortVita } = req.body;
   Artist.create({ artistName, countryOfOrigin, shortVita })
     .then((artists) => {
@@ -50,7 +51,7 @@ router.get("/details/:artistId", (req, res, next) => {
     });
 });
 
-router.get("/details/:artistId/update", (req, res, next) => {
+router.get("/details/:artistId/update", isAdmin, (req, res, next) => {
   const { artistId } = req.params;
   Artist.findById(artistId)
     .then((singleArtistFromDB) => {
@@ -62,7 +63,7 @@ router.get("/details/:artistId/update", (req, res, next) => {
     });
 });
 
-router.post("/details/:artistId/update", (req, res, next) => {
+router.post("/details/:artistId/update", isAdmin, (req, res, next) => {
   const { artistId } = req.params;
   const { artistName, countryOfOrigin, shortVita } = req.body;
   Artist.findByIdAndUpdate(
@@ -84,7 +85,7 @@ router.post("/details/:artistId/update", (req, res, next) => {
 
 // router.post -> delete an artist
 
-router.post("/details/:artistId/delete", (req, res, next) => {
+router.post("/details/:artistId/delete", isAdmin, (req, res, next) => {
   const { artistId } = req.params;
   Artist.findByIdAndDelete(artistId)
     .then(() => {
@@ -94,6 +95,5 @@ router.post("/details/:artistId/delete", (req, res, next) => {
       console.log(err);
     });
 });
-
 
 module.exports = router;

@@ -3,6 +3,7 @@ const Art = require("../models/Art.model");
 const ArtModel = require("../models/Art.model");
 const fileUploader = require("../middlewares/cloudinary.config");
 const User = require("../models/User.model");
+const { isLoggedIn } = require("../middlewares/auth-middlewares");
 
 // GET artworks/overview
 router.get("/overview", (req, res, next) => {
@@ -20,7 +21,7 @@ router.get("/list/:category", (req, res, next) => {
 });
 
 // GET artworks/upload
-router.get("/upload", (req, res, next) => {
+router.get("/upload", isLoggedIn, (req, res, next) => {
   const artwork = [
     "Graffiti",
     "Sticker",
@@ -34,16 +35,15 @@ router.get("/upload", (req, res, next) => {
 });
 
 // POST artworks/upload
-router.post(
-  "/upload",
-  fileUploader.single("artworkImage"),
+router.post("/upload", isLoggedIn, fileUploader.single("artworkImage"),
   (req, res, next) => {
     // Add a new artwork
-    const { category, artist, date, location, description } = req.body;
+    const { category, artist, titleOfArtwork, date, location, description } = req.body;
     console.log(req.file.path);
     Art.create({
       category,
       artist,
+      titleOfArtwork,
       date,
       location,
       description,
@@ -66,8 +66,12 @@ router.post(
 router.get("/details/:artworkId", (req, res, next) => {
   const { artworkId } = req.params;
   Art.findById(artworkId)
+  .populate("uploadedBy")
     .then((singleArtworkFromDB) => {
-      res.render("artworks/details.hbs", singleArtworkFromDB);
+      console.log("Show me what you get:", singleArtworkFromDB)
+      let username = singleArtworkFromDB.uploadedBy.username
+      delete singleArtworkFromDB.uploadedBy
+      res.render("artworks/details.hbs", { singleArtworkFromDB, username});
     })
     .catch((err) => {
       console.log(err);
@@ -76,7 +80,7 @@ router.get("/details/:artworkId", (req, res, next) => {
 
 // GET details/:id -> update the details of the artwork
 
-router.get("/details/:artworkId/update", (req, res, next) => {
+router.get("/details/:artworkId/update", isLoggedIn, (req, res, next) => {
   const { artworkId } = req.params;
   Art.findById(artworkId)
     .then((singleArtworkFromDB) => {
@@ -90,12 +94,12 @@ router.get("/details/:artworkId/update", (req, res, next) => {
 
 // ggf. redirect austauschen zu "details"
 
-router.post("/details/:artworkId/update", (req, res, next) => {
+router.post("/details/:artworkId/update", isLoggedIn, (req, res, next) => {
   const { artworkId } = req.params;
-  const { category, artist, date, location, description } = req.body;
+  const { category, artist, titleOfArtwork, date, location, description } = req.body;
   Art.findByIdAndUpdate(
     artworkId,
-    { category, artist, date, location, description },
+    { category, artist, titleOfArtwork, date, location, description },
     { new: true }
   )
     .then((singleArtworkFromDB) => {
@@ -112,7 +116,7 @@ router.post("/details/:artworkId/update", (req, res, next) => {
 
 // router.post -> delete an artwork
 
-router.post("/details/:artworkId/delete", (req, res, next) => {
+router.post("/details/:artworkId/delete", isLoggedIn, (req, res, next) => {
   const { artworkId } = req.params;
   Art.findByIdAndDelete(artworkId)
     .then(() => {

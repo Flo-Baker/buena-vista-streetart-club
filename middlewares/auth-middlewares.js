@@ -8,5 +8,11 @@ module.exports = {
       } else { 
         res.redirect('/auth/login')
       }
-    }
-  }
+    },
+    isAdmin: (req, res, next) => {
+      if (req.session.loggedInUser && req.session.loggedInUser.isAdmin) {
+        next() 
+      } else { 
+        res.redirect('/auth/login')
+      }
+    }};

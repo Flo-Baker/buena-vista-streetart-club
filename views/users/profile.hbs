@@ -4,13 +4,13 @@
 
     <p>You are logged in with: {{email}}</p>
     <p>Your profile pic:</p>
-    <img src="{{profilePicture}}" alt="profile picture of {{username}}" />
+    <img src="{{profilePicture}}" alt="profile picture of {{username}}" width="100px"/>
   {{/with}}
   <br />
   <a href="/artworks/upload">Upload</a>
   {{#each arts}}
     <p>Your uploads:</p>
-    <img src="{{artworkImage}}" alt="streetart spotted by {{username}}" />
+    <img src="{{artworkImage}}" alt="streetart spotted by {{username}}" width="100px"/>
 
   {{/each}}
 </div>

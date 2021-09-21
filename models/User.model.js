@@ -27,6 +27,10 @@ const userSchema = new Schema({
   profilePicture: {
     type: String,
     default: "https://pixabay.com/vectors/avatar-beak-black-cute-emotion-1295404/"
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
   }
 });
 

@@ -2,13 +2,18 @@
 <div>
   {{#each arts}}
     <img src="{{this.artworkImage}}" width="100px" />
-    {{this.artist}}
-    {{this.location}}
+    <br>
+    <p>Artist: {{this.artist}}</p>
+    <p>Spotted in: {{this.location}}</p>
     <a href="/artworks/details/{{this._id}}">See details of this Artwork</a>
     <br>
     <a href="/artworks/details/{{this._id}}/update">Edit Artwork</a>
-  <br />
+  <br>
   <form action="/artworks/details/{{this._id}}/delete" method="POST">
     <button type="submit">Delete</button>
+    <hr>
   {{/each}}
+   <form action="/artworks/upload" method="GET">
+    <button type="submit">Upload!</button>
+  </form>
 </div>

@@ -16,7 +16,7 @@ router.post("/signup", fileUploader.single("imageUrl"), (req, res, next) => {
 
   // 1. Backend validators
   // 1.1 check if user fills out required parts of the form (if not => errorMessage)
-  if (!firstName || !lastName || !email || !password || !req.file.path) {
+  if ( !firstName || !lastName || !email || !password || !req.file.path ) {
     res.render("auth/signup.hbs", {
       errorMessage:
         "Please fill out required parts of the form and don't forget to add a picture.",

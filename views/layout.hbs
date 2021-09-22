@@ -5,16 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{title}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
   <body>
-    <a href="/artworks/overview">Artworks</a>
+    <ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/artworks/overview">Artworks</a>
+  </li>
+  {{!-- <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Artworks</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="/artworks/list/Graffiti">Graffiti</a></li>
+      <li><a class="dropdown-item" href="/artworks/list/Sticker">Sticker</a></li>
+      <li><a class="dropdown-item" href="/artworks/list/Urban-Knitting">Urban Knitting</a></li>
+      <li><a class="dropdown-item" href="/artworks/list/Graphic-Poster">Graphic Poster</a></li>
+      <li><a class="dropdown-item" href="/artworks/list/Paper-Works">Paper Works</a></li>
+      <li><a class="dropdown-item" href="/artworks/list/Mosaic">Mosaic</a></li>
+      <li><a class="dropdown-item" href="/artworks/list/Stencil">Stencil</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="/auth/logout">Logout</a></li>
+    </ul> --}}
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/auth/signup">Signup</a>
+  </li>
+  <li class="nav-item"></li>
+    <a class="nav-link" href="/auth/login">Login</a>
+  </li>
+  <li class="nav-item"></li>
+    <a class="nav-link" href="/profile">Profile</a>
+  </li>
+  <li class="nav-item"></li>
+    <a class="nav-link" href="/auth/logout">Logout</a>
+  </li>
+</ul>
+    
+    {{!-- <a href="/artworks/overview">Artworks</a>
     <a href="/artists/list">Artist</a>
     <a href="/auth/signup">Signup</a>
     <a href="/auth/login">Login</a>
     <a href="/profile">Profile</a>
-    <a href="/auth/logout">Logout</a>
+    <a href="/auth/logout">Logout</a> --}}
     {{{body}}}
 
     <script src="/js/script.js"></script>

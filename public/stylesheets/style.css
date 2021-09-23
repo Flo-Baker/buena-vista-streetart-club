@@ -2,6 +2,18 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+.bg {
+  /* The image used */
+  background-image: url("../images/Background.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 a {
   color: #00b7ff;

@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    
     <ul class="nav nav-pills">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -47,16 +48,19 @@
     <a class="nav-link" href="/auth/logout">Logout</a>
   </li>
 </ul>
-    
+    {{{body}}}
+
+    <script src="/js/script.js"></script> 
+    <div class="bg"></div>
+    <p class="py-5 text-center">
+
     {{!-- <a href="/artworks/overview">Artworks</a>
     <a href="/artists/list">Artist</a>
     <a href="/auth/signup">Signup</a>
     <a href="/auth/login">Login</a>
     <a href="/profile">Profile</a>
     <a href="/auth/logout">Logout</a> --}}
-    {{{body}}}
-
-    <script src="/js/script.js"></script>
+   
   </body>
 
 </html>

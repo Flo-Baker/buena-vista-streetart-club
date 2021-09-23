@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { isAdmin } = require("../middlewares/auth-middlewares");
+const { isAdmin, isLoggedIn } = require("../middlewares/auth-middlewares");
 const Artist = require("../models/Artist.model");
 const ArtistModel = require("../models/Artist.model");
 
@@ -40,7 +40,7 @@ router.post("/create", isAdmin, (req, res, next) => {
 // GET details/:id
 // renders the details of the uploaded artist that has an unique ID in the DB
 
-router.get("/details/:artistId", (req, res, next) => {
+router.get("/details/:artistId", isLoggedIn, (req, res, next) => {
   const { artistId } = req.params;
   Artist.findById(artistId)
     .then((singleArtistFromDB) => {

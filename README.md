@@ -67,3 +67,8 @@ in order of priority
 - Mosaic Image: https://unsplash.com/photos/cNVO-8JhgAg by @thevoncomplex
 
 - Mosaic DB Image: https://unsplash.com/photos/fmhzFlA-jc0 by @larry_rw
+
+- Paper Work Image: https://unsplash.com/photos/RzIDFfMXQ_A by @aleyna22
+
+- Stencil Image: https://unsplash.com/photos/xfekW601_tQ @simplicity
+- Urban Knitting Image: https://unsplash.com/photos/prh26chtvYc @ cherrykicks

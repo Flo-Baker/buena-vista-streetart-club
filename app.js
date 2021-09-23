@@ -22,7 +22,7 @@ require("./config")(app);
 const projectName = "buena-vista-streetart-club";
 const capitalized = (string) => string[0].toUpperCase() + string.slice(1).toLowerCase();
 
-app.locals.title = `Welcome to Buena Vista Street Art Club`;
+app.locals.title = `Welcome Art Lover to Buena Vista Street Art Club`;
 
 // 👇 Start handling routes here
 const index = require("./routes/index");

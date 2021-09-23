@@ -1,20 +1,25 @@
 <h1>Available Artists</h1>
 
 {{#each artists}}
-  <h2>{{this.artistName}}</h2>
+  <h2>{{artistName}}</h2>
   <br>
+  {{#if ../isLoggedIn}}
   <a href="/artists/details/{{this._id}}">See Shortvita of this Artists</a>
+  {{/if}}
   <br>
+  {{#if ../isAdmin}}
+
   <a href="/artists/details/{{this._id}}/update">Edit Artist</a>
   <br />
   <form action="/artists/details/{{this._id}}/delete" method="POST">
     <button type="submit">Delete</button>
   </form>
+  {{/if}}
   <hr />
 {{/each}}
 
+{{#if isAdmin}}
 <form action="/artists/create" method="GET">
     <button type="submit">Create a new Artist!</button>
-  </form>
-
-<a href="/artists/create">Create a new Artist</a>
+</form>
+{{/if}}

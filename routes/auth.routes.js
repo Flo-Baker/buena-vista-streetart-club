@@ -16,7 +16,7 @@ router.post("/signup", fileUploader.single("imageUrl"), (req, res, next) => {
 
   // 1. Backend validators
   // 1.1 check if user fills out required parts of the form (if not => errorMessage)
-  if ( !firstName || !lastName || !email || !password || !req.file.path ) {
+  if (!firstName || !lastName || !email || !password || !req.file.path) {
     res.render("auth/signup.hbs", {
       errorMessage:
         "Please fill out required parts of the form and don't forget to add a picture.",
@@ -124,6 +124,11 @@ router.post("/login", (req, res, next) => {
           // create the global variable to lead the private user site (profile)
           req.app.locals.isLoggedIn = true;
 
+          // how to create isAdmin only if the user is of type admin
+          if (req.session.loggedInUser.isAdmin === true) {
+            req.app.locals.isAdmin = true;
+          }
+
           // if everythings fine -> user gets to private profile
           res.redirect("/profile");
 
@@ -148,6 +153,9 @@ router.post("/login", (req, res, next) => {
 router.get("/logout", (req, res, next) => {
   // to end the session of a user we need to "destroy" it
   req.session.destroy();
+  req.app.locals.isLoggedIn = false;
+  req.app.locals.isAdmin = false;
+
   // when session is over -> redirect to homepage
   res.redirect("/");
 });

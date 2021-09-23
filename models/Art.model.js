@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const artSchema = new Schema ({
     category: {
         type: String,
-        enum: [ 'Graffiti', 'Sticker', 'Urban Knitting', 'Graphic Poster', 'Paper Works', 'Mosaic', 'Stencil' ],
+        enum: [ 'Graffiti', 'Sticker', 'Urban Knitting', 'Paper Works', 'Mosaic', 'Stencil' ],
     }, 
     artist: {
         type: String, 

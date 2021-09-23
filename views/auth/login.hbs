@@ -1,17 +1,20 @@
-<h2>Login</h2>
+<div class="bg">
 
-<div>
-  <form action="/auth/login" method="POST">
+  <h2>Login</h2>
 
-    <label for="email">E-Mail:</label>
-    <input type="text" name="email" automcomplete="off" />
+  <div>
+    <form action="/auth/login" method="POST">
 
-    <label for="password">Password:</label>
-    <input type="password" name="password" automcomplete="off" />
-<br>
-    <button type="submit">Login!</button>
+      <label for="email">E-Mail:</label>
+      <input type="text" name="email" automcomplete="off" />
 
-    <p style="color: red">{{errorMessage}}</p>
+      <label for="password">Password:</label>
+      <input type="password" name="password" automcomplete="off" />
+      <br />
+      <button type="submit">Login!</button>
 
-  </form>
+      <p style="color: red">{{errorMessage}}</p>
+
+    </form>
+  </div>
 </div>

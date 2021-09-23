@@ -13,7 +13,9 @@ router.get("/overview", (req, res, next) => {
 // GET artworks/list
 router.get("/list/:category", (req, res, next) => {
   const { category } = req.params;
-  Art.find( { category: category} )
+  // solve a kata to remove the minus simbol and add a space instead
+  let cleanCategory = category.replace("-", " ")
+  Art.find( { category: cleanCategory} )
     .then((arts) => {
       res.render("artworks/list.hbs", { arts });
     })

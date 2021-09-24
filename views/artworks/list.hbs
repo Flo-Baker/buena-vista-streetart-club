@@ -1,19 +1,23 @@
-<h1>Available Artworks</h1>
+{{#each arts}}
+<h1>{{category}} Artworks</h1>
 <div>
-  {{#each arts}}
+  
     <img src="{{this.artworkImage}}" width="100px" />
     <br>
     <p>Artist: {{this.artist}}</p>
     <p>Spotted in: {{this.location}}</p>
-    <a href="/artworks/details/{{this._id}}">See details of this Artwork</a>
+    <a href="/artworks/details/{{this._id}}">See details of this {{category}}</a>
     <br>
-    <a href="/artworks/details/{{this._id}}/update">Edit Artwork</a>
+    {{!-- <a href="/artworks/details/{{this._id}}/update">Edit Artwork</a> --}}
   <br>
-  <form action="/artworks/details/{{this._id}}/delete" method="POST">
-    <button type="submit">Delete</button>
+  <a class="btn btn-outline-dark btn-sm" href="/artworks/details/{{this._id}}/update" role="button">Edit</a>
+  <a class="btn btn-danger btn-secondary btn-sm" href="/artworks/details/{{this._id}}/delete" role="button">Delete</a>
+  {{!-- <form action="/artworks/details/{{this._id}}/delete" method="POST">
+    <button class="btn btn-danger btn-secondary btn-sm" type="submit">Delete</button>
+  </form> --}}
     <hr>
-  {{/each}}
-   <form action="/artworks/upload" method="GET">
-    <button type="submit">Upload!</button>
+     <form action="/artworks/upload" method="GET">
+    <button type="submit" class="btn btn-success">Upload new {{category}}!</button>
   </form>
+  {{/each}}
 </div>

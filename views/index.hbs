@@ -1,7 +1,14 @@
-<h1>{{title}} </h1>
-<div class="bg">
+  <h1>{{title}} </h1>
+  <div class="bg">
 
-  <p class="p-welcome" >Please join the club & share<br>
-     what you have discovered!</p>
+    <div class="p-welcome">
+      <p>Join the club & share<br />
+        what you have discovered!</p>
+    </div>
 
-</div>
+    <form action="/auth/signup" method="GET">
+      <button type="submit" class="btn btn-light btn-signup">Sign up!</button>
+    </form>
+
+  </div>
+</section>

@@ -2,7 +2,25 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-.bg {
+
+.nav-bar{
+  margin-bottom: 15px;
+}
+
+.bg-artworks{
+  /* The image used */
+  background-image: url("../images/bg-artworks.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg{
   /* The image used */
   background-image: url("../images/Background.jpg");
 
@@ -14,6 +32,47 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.p-welcome {
+  margin: 0 0 0 15;
+  font-weight: bold;
+  font-size: large;
+}
+
+.btn-signup{
+  margin: 50 0 0 15;
+}
+
+/*.bg-container{
+  background-color: black;
+}*/
+
+.profile-container-top{
+  margin: 0 0 10 0;
+}
+
+.profile-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.profile-container-info{
+  font-size: 18px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.img-thumbnail{
+  border-radius: 10%;
+}
+
+.login-form{
+  margin: 0 0 0 15;
+}
+
 .container-arts {
   display: flex;
   flex-direction: row;
@@ -23,12 +82,7 @@ body {
 .mycard {
   margin: 15px;
 }
-.p-welcome {
-  margin-top: 10px;
-  margin-left: 5px;
-  font-weight: bold;
-  font-size: large;
-}
+
 
 a {
   color: #00b7ff;

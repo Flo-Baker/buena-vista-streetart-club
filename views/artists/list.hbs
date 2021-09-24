@@ -1,29 +1,57 @@
-<h1>Available Artists</h1>
+<h1>Artists</h1>
+{{!-- <div class="container-artists">
+{{#each artists}}
+<div class="card mycard" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title">{{artistName}}</h2>
+    <h3 class="card-subtitle mb-2 text-muted">Any Info here?</h3>
+    
+      {{#if ../isLoggedIn}}
+    <a href="/artists/details/{{this._id}}" class="card-link">See Shortvita of {{artistName}}</a>
+    {{/if}}
+    {{#if ../isAdmin}}
+    <form action="/artists/details/{{this._id}}/delete" method="POST" class="card-link">
+    <button type="submit">Delete</button>
+    </form>
+    {{/if}}
+  
+{{/each}}
+  </div>
+</div>
+</div>
+<hr> --}}
 
 {{#each artists}}
-    <ul>
-      <li> {{artistName}}</li>
-    </ul>
-  <br>
+
+<h3>{{artistName}}</h3>
+
+
   {{#if ../isLoggedIn}}
-  <a href="/artists/details/{{this._id}}">See Shortvita of this Artists</a>
+  <a href="/artists/details/{{this._id}}">See Shortvita of {{artistName}}</a>
   {{/if}}
   <br>
   {{#if ../isAdmin}}
 
-  <a href="/artists/details/{{this._id}}/update">Edit Artist</a>
-  <br />
-  <form action="/artists/details/{{this._id}}/delete" method="POST">
-    <button type="submit">Delete</button>
+  {{!-- <a href="/artists/details/{{this._id}}/update">Edit Artist</a>
+  <br /> --}}
+
+<a class="btn btn-outline-dark btn-sm" href="/artists/details/{{this._id}}/update" role="button">Edit</a>
+<a class="btn btn-danger btn-secondary btn-sm" href="/artists/details/{{this._id}}/delete" role="button">Delete</a>
+
+  {{!-- <form action="/artists/details/{{this._id}}/update" method="POST">
+    <button type="submit" class="btn btn-dark btn-secondary btn-sm">Edit</button>
   </form>
+
+  <form action="/artists/details/{{this._id}}/delete" method="POST">
+    <button type="submit" class="btn btn-danger btn-secondary btn-sm">Delete</button>
+  </form> --}}
+  <hr /> 
   {{/if}}
   
 {{/each}}
 
-<hr />
-
 {{#if isAdmin}}
 <form action="/artists/create" method="GET">
-    <button type="submit">Create a new Artist!</button>
+    <button type="submit" class="btn btn-success">Add new Artist!</button>
 </form>
 {{/if}}

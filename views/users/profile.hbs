@@ -1,9 +1,22 @@
-<div>
+<div class="profile-container-top"></div>
   {{#with user}}
     <h2>Hi {{username}}!</h2>
+<div class="profile-container">
+    <div class="profile-picture">
+      <img
+        src="{{profilePicture}}"
+        class="img-thumbnail"
+        alt="profile picture of {{username}}"
+        width="200px"
+      />
+    </div>
 
+    <div class="profile-container-info">
 
-<div class="container">
+      <p>You are logged in with: {{email}}</p>
+    </div>
+
+    {{!-- <div class="container">
   <div class="row">
     <div class="col">
   xxx
@@ -13,17 +26,19 @@
     <img
       src="{{profilePicture}}"
       alt="/images/profile.png"
-      {{!-- alt="profile picture of {{username}}" --}}
+      {{ alt="profile picture of {{username}}" }} 
       width="100px"
       <br>
     <p>You are logged in with: {{email}}</p>
     </div>
-  </div>    
-
+  </div>     --}}
   {{/with}}
-  <br />
+</div>
 
-  <p>Your uploads:</p>
+<hr>
+
+<div class="profile-container-uploads">
+  <h3>Your uploads</h3>
   {{#each arts}}
 
     <img
@@ -35,12 +50,13 @@
   {{/each}}
   <hr />
   <form action="/artworks/upload" method="GET">
-    <button type="submit">Upload!</button>
+    <button type="submit" class="btn btn-success">Upload new Artwork!</button>
   </form>
 </div>
 
 
- {{!-- {{#each arts}}
+
+{{!-- {{#each arts}}
     <div class="card" style="width: 18rem;">
     <img src="{{artworkImage}}" class="card-img-top" alt="..." />
     <div class="card-body">

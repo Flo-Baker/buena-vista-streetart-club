@@ -1,8 +1,17 @@
 <h1>This is artist {{singleArtistFromDB.artistName}}</h1>
-<h2>Shortvita Artist</h2>
+
 
     <p>{{singleArtistFromDB.artistName}} is from {{singleArtistFromDB.countryOfOrigin}}</p>
     <br>
     {{singleArtistFromDB.shortVita}}
     <br>
     {{username}}
+
+    <div class="card" style="width: 18rem;">
+    <img src="/images/profile.png" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{singleArtistFromDB.artistName}}</h5>
+      <p class="card-text">{{singleArtistFromDB.shortVita}}</p>
+      <p class="card-text"> spotted by {{singleArtistFromDB.uploadedBy}}</p>
+    
+    </div>

@@ -1,7 +1,7 @@
 <h1>Upload Artwork</h1>
- 
+
 <div>
-<form action="/artworks/upload" method="POST" enctype="multipart/form-data">
+  <form action="/artworks/upload" method="POST" enctype="multipart/form-data">
 
     <label for="category">Choose art´s category:</label>
     <select name="category">
@@ -9,28 +9,32 @@
         <option value="{{this}}">{{this}}</option>
       {{/each}}
     </select>
-<br>
+    <br />
     <label for="artist">Artist:</label>
-    <textarea name="artist" cols="30" rows="1"></textarea>
-<br>
+    <textarea class="form-control" name="artist" cols="30" rows="1"></textarea>
+    <br />
     <label for="titleOfArtwork">Choose any title for the Artwork:</label>
-    <input type="text" name="titleOfArtwork"/>
-<br>
+    <input class="form-control" type="text" name="titleOfArtwork" />
+    <br />
     <label for="date">Date:</label>
-    <input type="date" name="date"/>
-<br>
+    <input class="form-control" type="date" name="date" />
+    <br />
     <label for="location">Country, City:</label>
-    <input type="text" name="location"/>
-<br>
+    <input class="form-control" type="text" name="location" />
+    <br />
     <label for="description">Description:</label>
-    <textarea name="description" cols="30" rows="10"></textarea>
-<br>
-    <label for='artworkImage'>Artwork Image:</label>
-    <input type='file' name='artworkImage' />
+    <textarea
+      class="form-control"
+      name="description"
+      cols="30"
+      rows="10"
+    ></textarea>
+    <br />
+    <label for="artworkImage">Artwork Image:</label>
+    <input class="form-control" type="file" name="artworkImage" />
 
     <button type="submit">Upload</button>
 
-
-</form>
+  </form>
 
 </div>

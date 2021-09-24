@@ -1,7 +1,9 @@
 <h1>Available Artists</h1>
 
 {{#each artists}}
-  <h2>{{artistName}}</h2>
+    <ul>
+      <li> {{artistName}}</li>
+    </ul>
   <br>
   {{#if ../isLoggedIn}}
   <a href="/artists/details/{{this._id}}">See Shortvita of this Artists</a>
@@ -15,8 +17,10 @@
     <button type="submit">Delete</button>
   </form>
   {{/if}}
-  <hr />
+  
 {{/each}}
+
+<hr />
 
 {{#if isAdmin}}
 <form action="/artists/create" method="GET">

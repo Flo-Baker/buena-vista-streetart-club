@@ -12,7 +12,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary,
   folder: "bvsac-artwork-folder",
-  allowedFormats: ["jpg", "jpeg", "png", "heic"],
+  allowedFormats: ["jpg", "jpeg", "png"],
 });
 
 module.exports = multer({ storage });

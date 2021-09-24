@@ -1,18 +1,29 @@
-<h1>This is your private Profile</h1>
 <div>
   {{#with user}}
     <h2>Hi {{username}}!</h2>
 
-    <p>You are logged in with: {{email}}</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+  xxx
+    </div>
+    <div class="col">
     <p>Your profile pic:</p>
     <img
       src="{{profilePicture}}"
-      alt="profile picture of {{username}}"
+      alt="/images/profile.png"
+      {{!-- alt="profile picture of {{username}}" --}}
       width="100px"
-    />
+      <br>
+    <p>You are logged in with: {{email}}</p>
+    </div>
+  </div>    
+
   {{/with}}
   <br />
-  <h2>Your uploads:</h2>
+
+  <p>Your uploads:</p>
   {{#each arts}}
 
     <img
@@ -22,8 +33,17 @@
     />
 
   {{/each}}
-  <hr>
+  <hr />
   <form action="/artworks/upload" method="GET">
     <button type="submit">Upload!</button>
   </form>
 </div>
+
+
+ {{!-- {{#each arts}}
+    <div class="card" style="width: 18rem;">
+    <img src="{{artworkImage}}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{artistName}} {{location}}</h5>
+    </div>
+     {{/each}} --}}

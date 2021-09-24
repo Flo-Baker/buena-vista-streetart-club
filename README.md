@@ -72,3 +72,6 @@ in order of priority
 
 - Stencil Image: https://unsplash.com/photos/xfekW601_tQ @simplicity
 - Urban Knitting Image: https://unsplash.com/photos/prh26chtvYc @ cherrykicks
+
+- Sources Streetart:
+- https://www.stadtkindfrankfurt.de/mata-haarig-strickguerilla-greetings-from-big-brother/ & https://www.facebook.com/Mata-Haarig-Strickguerilla-444034785614460/about/?ref=page_internal, https://www.space-invaders.com/about/

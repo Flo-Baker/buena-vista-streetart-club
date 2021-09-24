@@ -79,6 +79,14 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.profile-card-uploads{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100px;
+}
+
 .mycard {
   margin: 15px;
 }

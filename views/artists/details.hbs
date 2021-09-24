@@ -1,17 +1,33 @@
-<h1>This is artist {{singleArtistFromDB.artistName}}</h1>
+<h1>This is {{singleArtistFromDB.artistName}}</h1>
 
-
-    <p>{{singleArtistFromDB.artistName}} is from {{singleArtistFromDB.countryOfOrigin}}</p>
+    {{!-- <p>{{singleArtistFromDB.artistName}} is from {{singleArtistFromDB.countryOfOrigin}}</p>
     <br>
     {{singleArtistFromDB.shortVita}}
     <br>
-    {{username}}
+    {{username}} --}}
 
-    <div class="card" style="width: 18rem;">
+    {{!-- <div class="card" style="width: 18rem;">
     <img src="/images/profile.png" class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{singleArtistFromDB.artistName}}</h5>
       <p class="card-text">{{singleArtistFromDB.shortVita}}</p>
       <p class="card-text"> spotted by {{singleArtistFromDB.uploadedBy}}</p>
     
+    </div> --}}
+
+    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/images/profile.png" class="img-fluid rounded-start" alt="...">
     </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{singleArtistFromDB.artistName}}</h5>
+        <hr>
+        <p class="card-text">{{singleArtistFromDB.shortVita}}</p>
+        <hr>
+        <p class="card-text"><small class="text-muted">spotted by {{singleArtistFromDB.uploadedBy}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

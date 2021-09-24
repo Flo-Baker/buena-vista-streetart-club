@@ -1,6 +1,6 @@
 <h1>Here to update an artwork</h1>
 
-<div>
+{{!-- <div>
   <form action="/artworks/details/{{singleArtworkFromDB._id}}/update" method="POST">
 
     <label for="category">Choose art´s category:</label>
@@ -28,6 +28,41 @@
 
     <button type="submit">Update the Artwork</button>
 
+  </form>
+
+</div> --}}
+
+<div>
+  <form action="/artworks/details/{{singleArtworkFromDB._id}}/update" method="POST">
+
+    <label for="category">Choose art´s category:</label>
+    <select name="category">
+      {{#each artwork}}
+        <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+    <br />
+    <label for="artist">Artist:</label>
+    <textarea class="form-control" name="artist" cols="30" rows="1"></textarea>
+    <br />
+    <label for="titleOfArtwork">Change the title for the Artwork:</label>
+    <input class="form-control" type="text" name="titleOfArtwork" />
+    <br />
+    <label for="date">Date:</label>
+    <input class="form-control" type="date" name="date" />
+    <br />
+    <label for="location">Country, City:</label>
+    <input class="form-control" type="text" name="location" />
+    <br />
+    <label for="description">Description:</label>
+    <textarea
+      class="form-control"
+      name="description"
+      cols="30"
+      rows="5"
+    ></textarea>
+<br>
+    <button type="submit" class="btn btn-success">Update the Artwork!</button>
   </form>
 
 </div>

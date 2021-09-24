@@ -1,5 +1,5 @@
-<h2>Update the Artist</h2>
-<form action="/details/{{artist._id}}/update" method="POST">
+<h1>Update the Artist</h1>
+{{!-- <form action="/details/{{artist._id}}/update" method="POST">
   <label for="artistName">Artist Name:</label>
   <input type="text" name="artistName" value="{{artist.artistName}}" />
 
@@ -19,4 +19,20 @@
   >Short Vita</textarea>
 
   <button type="submit">Update Artist</button>
-</form>
+</form> --}}
+
+<div>
+  <form action="/details/{{artist._id}}/update" method="POST">
+    <label for="artistName">Artist Name:</label>
+    <textarea class="form-control" name="artistName" cols="30" rows="1"></textarea>
+    <br />
+    <label for="countryOfOrigin">Country of Origin:</label>
+    <input class="form-control" type="text" name="countryOfOrigin" />
+    <br />
+    <label for="shortVita">Short Vita:</label>
+    <textarea class="form-control" name="shortVita" cols="30" rows="5"></textarea>
+<br>
+    <button type="submit" class="btn btn-success">Update the Artist!</button>
+  </form>
+
+</div>

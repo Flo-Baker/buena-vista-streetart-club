@@ -129,7 +129,7 @@ router.post("/details/:artworkId/delete", isLoggedIn, (req, res, next) => {
   const { artworkId } = req.params;
   Art.findByIdAndDelete(artworkId)
     .then(() => {
-      res.redirect("/overview");
+      res.redirect("/artworks/overview");
     })
     .catch((err) => {
       console.log(err);

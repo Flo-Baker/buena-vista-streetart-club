@@ -1,6 +1,6 @@
 <h1>Create a new Artist</h1>
 
-<div>
+{{!-- <div>
   <form action="/artists/create" method="POST">
 
     <label for="artistName">Artist Name:</label>
@@ -15,6 +15,22 @@
 
     <button type="submit">Create New Artist</button>
 
+  </form>
+
+</div> --}}
+
+<div>
+  <form action="/artists/create" method="POST">
+    <label for="artistName">Artist Name:</label>
+    <textarea class="form-control" name="artistName" cols="30" rows="1"></textarea>
+    <br />
+    <label for="countryOfOrigin">Country of Origin:</label>
+    <input class="form-control" type="text" name="countryOfOrigin" />
+    <br />
+    <label for="shortVita">Short Vita:</label>
+    <textarea class="form-control" name="shortVita" cols="30" rows="5"></textarea>
+<br>
+    <button type="submit" class="btn btn-success">Create New Artist!</button>
   </form>
 
 </div>

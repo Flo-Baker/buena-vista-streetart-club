@@ -11,13 +11,20 @@
     {{!-- <a href="/artworks/details/{{this._id}}/update">Edit Artwork</a> --}}
   <br>
   <a class="btn btn-outline-dark btn-sm" href="/artworks/details/{{this._id}}/update" role="button">Edit</a>
-  <a class="btn btn-danger btn-secondary btn-sm" href="/artworks/details/{{this._id}}/delete" role="button">Delete</a>
-  {{!-- <form action="/artworks/details/{{this._id}}/delete" method="POST">
-    <button class="btn btn-danger btn-secondary btn-sm" type="submit">Delete</button>
-  </form> --}}
+
+  <form action="/artworks/details/{{this._id}}/delete" method="POST">
+    <button type="submit" class="btn btn-danger btn-secondary btn-sm">Delete</button>
+  </form> 
+
     <hr>
-     <form action="/artworks/upload" method="GET">
+  {{/each}}
+  {{#each arts}}
+   <form action="/artworks/upload" method="GET">
     <button type="submit" class="btn btn-success">Upload new {{category}}!</button>
   </form>
   {{/each}}
 </div>
+
+{{!-- <form action="/artworks/details/{{this._id}}/delete" method="GET">
+  <button type="submit" class="btn btn-danger btn-secondary btn-sm" role="button">Delete</button>
+  </form> --}}

@@ -1,23 +1,36 @@
 <div class="bg">
 
   <h2 id="h2-login">Please login to see more </h2>
-<br>
+  <br />
   <div class="login-form">
-    <form action="/auth/login" method="POST" class="row g-3">
-      
+    <form action="/auth/login" method="POST" class="column g-3">
+
       <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">E-Mail:</label>
-      <input type="email" class="form-control" id="inputEmail" name="email" automcomplete="off" />
+        <label for="inputEmail4" class="form-label">E-Mail:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="inputEmail"
+          name="email"
+          automcomplete="off"
+        />
       </div>
-      
-      <br>>
+
+      <br />
       <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Password:</label>
-      <input type="password" class="form-control" id="inputPassword4" name="password" automcomplete="off" />
-      
+        <label for="inputPassword4" class="form-label">Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="inputPassword4"
+          name="password"
+          automcomplete="off"
+        />
+      </div>
+
       <br />
       <button type="submit" class="btn btn-light">Login!</button>
-      {{!-- <button type="submit">Login!</button> --}}
+      {{! <button type="submit">Login!</button> }}
 
       <p style="color: red">{{errorMessage}}</p>
 

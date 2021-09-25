@@ -1,36 +1,42 @@
+<div class="img-list bg-artworks-list">
+  <h1>{{category}} Artworks</h1>
+
   {{#each arts}}
-<h1>{{category}} Artworks</h1>
-<div>
+    <div>
+      <img src="{{this.artworkImage}}" width="250px" />
+      <br />
+      <p>Artist: {{this.artist}}</p>
+      <p>Spotted in: {{this.location}}</p>
+      {{!-- <a href="/artworks/details/{{this._id}}/update">Edit Artwork</a> --}}
+      <br />
 
-    <img src="{{this.artworkImage}}" width="250px" class="img-list"/>
-    <br>
-    <p>Artist: {{this.artist}}</p>
-    <p>Spotted in: {{this.location}}</p>
-    <a href="/artworks/details/{{this._id}}">See details of this {{category}}</a>
-    <br>
-    {{!-- <a href="/artworks/details/{{this._id}}/update">Edit Artwork</a> --}}
-  <br>
+      <div class="btn-next">
+        {{!-- <a class="btn btn-outline-dark btn-sm" href="/artworks/details/{{this._id}}/update" role="button">Edit</a> --}}
+        <form action="/artworks/details/{{this._id}}" method="GET">
+          <button type="submit" class="btn btn-light btn-sm"> Details</button>
+        </form>
 
-  <div class="btn-next">
-  {{!-- <a class="btn btn-outline-dark btn-sm" href="/artworks/details/{{this._id}}/update" role="button">Edit</a> --}}
+        <form action="/artworks/details/{{this._id}}/update" method="GET">
+          <button type="submit" class="btn btn-light btn-sm">Edit</button>
+        </form>
 
-<form action="/artworks/details/{{this._id}}/update" method="GET">
-    <button type="submit" class="btn btn-outline-dark btn-sm">Edit</button>
-  </form>
+        <form action="/artworks/details/{{this._id}}/delete" method="POST">
+          <button
+            type="submit"
+            class="btn btn-dark btn-secondary btn-sm"
+          >Delete</button>
+        </form>
+      </div>
 
-  <form action="/artworks/details/{{this._id}}/delete" method="POST">
-    <button type="submit" class="btn btn-danger btn-secondary btn-sm">Delete</button>
-  </form>
-  </div> 
-
-    <hr>
+      <hr />
+    </div>
   {{/each}}
 
-   <form action="/artworks/upload" method="GET">
-    <button type="submit" class="btn btn-outline-success">Add more!</button>
-  </form>
-
 </div>
+
+<form action="/artworks/upload" method="GET">
+  <button type="submit" class="btn btn-outline-success">Add more!</button>
+</form>
 
 {{!-- <form action="/artworks/details/{{this._id}}/delete" method="GET">
   <button type="submit" class="btn btn-danger btn-secondary btn-sm" role="button">Delete</button>

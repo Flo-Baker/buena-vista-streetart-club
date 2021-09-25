@@ -6,7 +6,7 @@ body {
 .nav-bar {
   margin-bottom: 15px;
 }
-.img-card{
+.img-card {
   height: 215px;
 }
 
@@ -23,23 +23,31 @@ body {
   background-size: cover;
 }
 
-.artist-card{
+.bg-artist {
+  padding-top: 13px;
+  background-image: url("../images/BackgroundVita.jpg");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: cover;
+}
+
+.artist-card {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-#h2-login{
+#h2-login {
   padding-top: 10px;
   margin-left: 15px;
 }
 
-.artist-img-details{
-    padding-top: 30px;
-    padding-left: 10px;
+.artist-img-details {
+  padding-top: 30px;
+  padding-left: 10px;
 }
 
-#spotted-by{
+#spotted-by {
   text-align: right;
 }
 
@@ -60,17 +68,27 @@ body {
 
 .img-list {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bg-artworks-list {
+  background-image: url("../images/Backgroundlist.jpg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
 }
 
 .artist-list {
   margin-top: 10px;
 }
 
-.upload-form{
+.upload-form {
   margin: 0 200 0 200;
 }
 
-.update-form{
+.update-form {
   margin: 0 200 0 200;
 }
 
@@ -170,7 +188,7 @@ body {
   margin: 15px;
 }
 
-.btn-next{
+.btn-next {
   display: flex;
   flex-direction: row;
   gap: 10px;

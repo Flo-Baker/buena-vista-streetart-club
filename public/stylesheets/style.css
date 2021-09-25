@@ -3,11 +3,11 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.nav-bar{
+.nav-bar {
   margin-bottom: 15px;
 }
 
-.bg-artworks{
+.bg-artworks {
   /* The image used */
   background-image: url("../images/bg-artworks.jpg");
 
@@ -20,7 +20,21 @@ body {
   background-size: cover;
 }
 
-.bg{
+.signup {
+  /* The image used */
+  background-image: url("../images/bg-artworks.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .4;
+}
+
+.bg {
   /* The image used */
   background-image: url("../images/Background.jpg");
 
@@ -33,13 +47,26 @@ body {
   background-size: cover;
 }
 
+.bg-home {
+  /* The image used */
+  background-image: url("../images/Logo.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .p-welcome {
-  margin: 0 0 0 15;
+  text-align: center;
   font-weight: bold;
   font-size: large;
 }
 
-.btn-signup{
+.btn-signup {
   margin: 50 0 0 15;
 }
 
@@ -47,17 +74,24 @@ body {
   background-color: black;
 }*/
 
-.profile-container-top{
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.profile-container-top {
   margin: 0 0 10 0;
 }
 
-.profile-container{
+.profile-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.profile-container-info{
+.profile-container-info {
   font-size: 18px;
   margin-left: 15px;
   display: flex;
@@ -65,11 +99,11 @@ body {
   align-items: flex-end;
 }
 
-.img-thumbnail{
+.img-thumbnail {
   border-radius: 10%;
 }
 
-.login-form{
+.login-form {
   margin: 0 0 0 15;
 }
 
@@ -80,7 +114,7 @@ body {
   justify-content: space-evenly;
 }
 
-.profile-card-uploads{
+.profile-card-uploads {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -91,7 +125,6 @@ body {
   margin: 15px;
 }
 
-
 a {
   color: #00b7ff;
 }
@@ -99,3 +132,11 @@ a {
 h1 {
   color: 15px;
 }
+
+.h-welcome {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+

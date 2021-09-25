@@ -10,28 +10,34 @@ body {
 .bg-artworks {
   /* The image used */
   background-image: url("../images/bg-artworks.jpg");
+  background-repeat: repeat-y;
 
   /* Full height */
-  height: 100%;
+  /* height: 100%; */
 
   /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .signup {
   /* The image used */
-  background-image: url("../images/bg-artworks.jpg");
+  background-image: url("../images/signupbg1.jpg");
 
   /* Full height */
   height: 100%;
+  padding-top: 100;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: .4;
+  /* opacity: 0.4; */
+}
+
+#signup-form {
+  color: white;
+  margin: 0 100 0 100;
 }
 
 .bg {
@@ -139,4 +145,3 @@ h1 {
   color: black;
   text-align: center;
 }
-

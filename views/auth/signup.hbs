@@ -39,10 +39,13 @@
         autocomplete="off"
       />
       <br />
-      <label for="imageUrl">Profile Picture:</label>
-      <input type="file" name="imageUrl" />
+      {{!-- <label for="imageUrl">Profile Picture:</label>
+      <input type="file" name="imageUrl" /> --}}
 
-      <button class="btn btn-outline-dark" type="submit">Join the club!</button>
+<label for="imageUrl">Profile Picture:</label>
+    <input class="form-control" type="file" name="imageUrl" />
+    <br>
+      <button class="btn btn-light" type="submit">Join the club!</button>
 
       <p style="color: red">{{errorMessage}}</p>
 

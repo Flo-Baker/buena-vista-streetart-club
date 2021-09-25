@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
+ 
+
 {{!-- <img class="img-responsive2"       
        src="/images/Logo.png" alt="Buena Vista Social Club Logo" width="50px"> --}}
    {{!-- <h2 class="navbar-brand brand-name">
@@ -17,7 +19,38 @@
   {{!-- <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="/">Home</a>
   </li> --}}
-  <body>
+
+ <body>
+
+
+<ul class="nav-bar nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/artworks/overview">Artworks</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/artists/list">Artists</a>
+  </li>
+   {{#if isLoggedIn}}
+  <li class="nav-item">
+    <a class="nav-link" href="/profile">Profile</a>
+  </li>
+    {{else}}
+  <li class="nav-item">
+    <a class="nav-link" href="/auth/signup">Signup</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/auth/login">Login</a>
+  </li>
+   {{/if}}
+   <li class="nav-item"></li>
+    <a class="nav-link" href="/auth/logout">Logout</a>
+  </li>
+</ul>
+
+   <!--
     <ul class="nav nav-pills nav-bar">
   <li class="nav-item">
     <a class="nav-link" href="/">Home</a>
@@ -28,6 +61,7 @@
   <li class="nav-item">
     <a class="nav-link" href="/artists/list">Artists</a>
   </li>
+  
   {{!-- <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Artworks</a>
     <ul class="dropdown-menu">
@@ -60,6 +94,7 @@
     <a class="nav-link" href="/auth/logout">Logout</a>
   </li>
 </ul>
+-->
     {{{body}}}
 
     <script src="/js/script.js"></script> 

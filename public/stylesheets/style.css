@@ -6,6 +6,9 @@ body {
 .nav-bar {
   margin-bottom: 15px;
 }
+.img-card{
+  height: 215px;
+}
 
 .bg-artworks {
   /* The image used */
@@ -18,6 +21,26 @@ body {
   /* Center and scale the image nicely */
   background-position: center;
   background-size: cover;
+}
+
+.artist-card{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#h2-login{
+  padding-top: 10px;
+  margin-left: 15px;
+}
+
+.artist-img-details{
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+#spotted-by{
+  text-align: right;
 }
 
 .signup {
@@ -35,9 +58,25 @@ body {
   /* opacity: 0.4; */
 }
 
+.img-list {
+  margin-bottom: 20px;
+}
+
+.artist-list {
+  margin-top: 10px;
+}
+
+.upload-form{
+  margin: 0 200 0 200;
+}
+
+.update-form{
+  margin: 0 200 0 200;
+}
+
 #signup-form {
   color: white;
-  margin: 0 100 0 100;
+  margin: 0 200 0 200;
 }
 
 .bg {
@@ -110,7 +149,7 @@ body {
 }
 
 .login-form {
-  margin: 0 0 0 15;
+  margin: 0 410 0 15;
 }
 
 .container-arts {
@@ -131,11 +170,19 @@ body {
   margin: 15px;
 }
 
+.btn-next{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
 a {
   color: #00b7ff;
 }
 
 h1 {
+  text-align: center;
   color: 15px;
 }
 

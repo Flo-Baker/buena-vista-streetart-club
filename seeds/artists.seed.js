@@ -11,7 +11,7 @@ const artist = [
     artistName: "El Bocho",
     countryOfOrigin: "Germany",
     shortVita:
-      "El Bocho started his street art projects in 1997. He worked as an illustrator for the newspaper Frankfurter Allgemeine and now calls Berlin his home. The artist using graphic posters to tell his stories. His most famous characters are Little Lucy, xxx, xxx.",
+      "El Bocho started his street art projects in 1997. He worked as an illustrator for the newspaper Frankfurter Allgemeine and now calls Berlin his home. The artist using graphic posters to tell his stories. His most famous characters are Little Lucy, Poor Hannah, Berlin Women.",
   },
   {
     artistName: "SP38",

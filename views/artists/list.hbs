@@ -27,7 +27,7 @@
 
 
   {{#if ../isLoggedIn}}
-  <a href="/artists/details/{{this._id}}">See Shortvita of {{artistName}}</a>
+  <a href="/artists/details/{{this._id}}" >See Shortvita of {{artistName}}</a>
   {{/if}}
   <br>
   {{#if ../isAdmin}}
@@ -35,16 +35,21 @@
   {{!-- <a href="/artists/details/{{this._id}}/update">Edit Artist</a>
   <br /> --}}
 
-<a class="btn btn-outline-dark btn-sm" href="/artists/details/{{this._id}}/update" role="button">Edit</a>
+{{!-- <a class="btn btn-outline-dark btn-sm" href="/artists/details/{{this._id}}/update" role="button">Edit</a> --}}
 {{!--<a class="btn btn-danger btn-secondary btn-sm" href="/artists/details/{{this._id}}/delete" role="button">Delete</a>--}}
 
 {{!--   <form action="/artists/details/{{this._id}}/update" method="POST">
     <button type="submit" class="btn btn-dark btn-secondary btn-sm">Edit</button>
   </form>--}}
+<div class="btn-next artist-list">
+<form action="/artists/details/{{this._id}}/update" method="GET">
+    <button type="submit" class="btn btn-outline-dark btn-sm">Edit</button>
+  </form> 
 
   <form action="/artists/details/{{this._id}}/delete" method="POST">
     <button type="submit" class="btn btn-danger btn-secondary btn-sm">Delete</button>
   </form> 
+  </div>
   <hr /> 
   {{/if}}
   
@@ -52,6 +57,6 @@
 
 {{#if isAdmin}}
 <form action="/artists/create" method="GET">
-    <button type="submit" class="btn btn-success">Add new Artist!</button>
+    <button type="submit" class="btn btn-outline-success">Add new Artist!</button>
 </form>
 {{/if}}
